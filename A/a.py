@@ -6,7 +6,7 @@ n = 0
 
 while n < t:
     n += 1
-    r, _, c = input()
+    r, c = input().split(" ")
     r, c = int(r), int(c)
     grid = [list(l) for l in sys.stdin.read((r * c) + r).strip("\n").split("\n")]
     h = [x for x in grid if 'X' in x]
