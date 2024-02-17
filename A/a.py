@@ -10,5 +10,5 @@ while n < t:
     r, c = int(r), int(c)
     grid = [list(l) for l in sys.stdin.read((r * c) + r).strip("\n").split("\n")]
     h = [x for x in grid if 'X' in x]
-    v = [row for row in [[row[i] for row in h] for i in range(c)] if 'X' in row]
+    v = [x for x in [[x[i] for x in h] for i in range(c)] if 'X' in x]
     print(min(len(h), len(v)))
